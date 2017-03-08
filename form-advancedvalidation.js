@@ -12,7 +12,7 @@ function validate(){
     document.getElementById("usernameSuccess").innerHTML="Good username.";
 
     //Show message that there is an error with the username...
-    document.getElementById("usernameError").innerHTML="Bad username.";
+    document.getElementById("usernameError").innerHTML="Username must be at least 6 characters.";
     document.getElementById("usernameError").classList.remove("hidden-message");
     document.getElementById("usernameError").classList.add("shown-message");
   }
@@ -22,29 +22,24 @@ if (passEntered == "password"){
   document.getElementById("passwordGroup").classList.add("has-error");
 
   //Show message that there is an error with the password...
-  document.getElementById("passwordError").innerHTML="Bad password.";
+  document.getElementById("passwordError").innerHTML="Password can't be password.";
   document.getElementById("passwordError").classList.remove("hidden-message");
   document.getElementById("passwordError").classList.add("shown-message");
 }
 else{
   document.getElementById("passwordGroup").classList.add("has-success");
 }
-if (passEntered==UserEntered)
-document.getElementById("passwordGroup").classList.add("has-error");{
-}
-else{
-  document.getElementById("passwordGroup").classList.add("has-success");
-}
-if (passEntered.length<=20 passEntered.length>=6){
-  document.getElementById("passwordGroup").classList.add("has-success");
-
-}
-else{
+if (passEntered==userEntered){
   document.getElementById("passwordGroup").classList.add("has-error");
 
-  document.getElementById("passwordError").innerHTML="Bad password.";
+  //Show message that there is an error with the password...
+  document.getElementById("passwordError").innerHTML="Password can't be Username.";
   document.getElementById("passwordError").classList.remove("hidden-message");
   document.getElementById("passwordError").classList.add("shown-message");
+
+}
+else{
+  document.getElementById("passwordGroup").classList.add("has-success");
 
 }
 }
